@@ -5,7 +5,7 @@
         <h2>
           <li v-for="(post, index) in allPosts" :key="index">
             <nuxt-link :to="`/blog/${post.slug}`">{{post.title}}</nuxt-link>
-          </li>  
+          </li>
         </h2>
       </div>
     </v-col>
@@ -24,7 +24,7 @@ export default defineComponent({
         content
         slug
       }
-    }`
+    }`,
   },
   setup() {
     
