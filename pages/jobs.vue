@@ -23,7 +23,9 @@
           <li v-for="(job, index) in allJobs" :key="index">
             <nuxt-link :to="`/blog/${job.slug}`">{{job.title}}</nuxt-link>
           </li>
+          <v-btn>testbtn-julia</v-btn>
         </h2>
+        <v-btn>testbtn</v-btn>
       </div>
 >>>>>>> master
     </v-col>
