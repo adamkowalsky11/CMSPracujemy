@@ -1,5 +1,5 @@
 <template>
-  <v-app dark>
+  <v-app>
     <v-navigation-drawer
       v-model="drawer"
       :clipped="clipped"
@@ -31,6 +31,7 @@
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title v-text="title" />
       <v-spacer />
+      <v-btn @click="$vuetify.theme.dark=!$vuetify.theme.dark"><v-icon>mdi-invert-colors</v-icon>Dark/light mode</v-btn>
     </v-app-bar>
     <v-main>
       <v-container>
@@ -45,6 +46,7 @@
       <span>&copy; {{ new Date().getFullYear() }}</span>
     </v-footer>
   </v-app>
+  
 </template>
 
 <script>
@@ -74,3 +76,7 @@ export default {
   }
 }
 </script>
+
+
+
+
