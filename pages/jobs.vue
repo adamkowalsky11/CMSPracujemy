@@ -7,6 +7,7 @@
             <nuxt-link :to="`/blog/${job.slug}`">{{job.title}}</nuxt-link>
           </li>
         </h2>
+        <v-btn>testbtn</v-btn>
       </div>
     </v-col>
   </v-row>
