@@ -5,7 +5,6 @@
         <h1 v-if="job">{{job.title}}</h1>
         <v-img v-if="job" max-height="128" max-width="250" src="https://www.datocms-assets.com/59409/1638966135-pjatk.jpeg"></v-img>
         <p v-if="job">{{job.description}}</p>
-        <p v-if="job">{{job.jsontest}}</p>
     </div>
 </template>
 
@@ -49,7 +48,6 @@ export default defineComponent({
                         description
                         title
                         salary
-                        jsontest
                 }
             }`,
             prefetch({route}){
