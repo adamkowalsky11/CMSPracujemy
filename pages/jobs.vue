@@ -1,23 +1,37 @@
+
 <template>
-  <v-row justify="right" align="center">
-    <v-col cols="12" sm="8" md="6">
-      <div>
-        <h2>
-          <li v-for="(job, index) in allJobs" :key="index">
-            <nuxt-link :to="`/blog/${job.slug}`">{{job.title}}</nuxt-link>
-          </li>
-        </h2>
-      </div>
-    </v-col>
+<div>
+  <header>
+    Oferty pracy
+  </header>
+  <v-row>
+    <v-col cols="4">
+  <search-parameter/>
+  </v-col>
+  <v-col>
+  <price-range/>
+  </v-col>
+  
   </v-row>
+    <location/>
+
+  <card/>
+</div>
 </template>
 
 <script>
 import gql from 'graphql-tag'
 import { defineComponent } from '@vue/composition-api'
+import priceRange from '~/components/jobComponents/priceRange.vue'
+import SearchParameter from '~/components/jobComponents/searchParameter.vue'
+import Card from '~/components/jobComponents/card.vue'
+import location from '~/components/jobComponents/location.vue'
+
 
 export default defineComponent({
-  apollo:{
+  components: { priceRange, SearchParameter, Card, location },
+  
+    Cardapollo:{
     allJobs: gql`{
       allJobs {
         id
@@ -29,7 +43,6 @@ export default defineComponent({
         description
         title
         salary
-        jsontest
         slug
       }
     }`,

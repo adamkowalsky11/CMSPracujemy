@@ -9,8 +9,8 @@
   </v-carousel>
 </template>
 
-
 <script>
+
 import gql from 'graphql-tag'
 import { defineComponent } from '@vue/composition-api'
 
