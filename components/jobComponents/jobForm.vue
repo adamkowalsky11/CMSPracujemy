@@ -44,7 +44,7 @@
           v-model="phoneNumber"
           :counter="9"
           :error-messages="errors"
-          label="Phone Number"
+          label="Numer telefonu"
           required
         ></v-text-field>
       </validation-provider>

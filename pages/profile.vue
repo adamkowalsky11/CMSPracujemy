@@ -1,10 +1,8 @@
 <template>
     <div>
        
-        <card/>
-         <v-card>
-            <v-card-text>opis </v-card-text>
-        </v-card>
+       <profile-card/>
+
         <card/>
     </div>
     
@@ -12,11 +10,13 @@
 
 <script>
 import { defineComponent } from '@vue/composition-api'
-import card from '~/components/jobComponents/card.vue'
+import profileCard from '~/components/jobComponents/profileCard.vue'
 import JobCard from '~/components/jobComponents/jobCard.vue'
+import card from '~/components/jobComponents/card.vue'
+
 
 export default defineComponent({
-  components: { card, JobCard },
+  components: { profileCard, JobCard, card },
     setup() {
         
     },

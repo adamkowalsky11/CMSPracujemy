@@ -40,31 +40,21 @@
     label="Logo"
   ></v-file-input>
     
-    <v-btn
+    
+
+   
+
+  </v-form>
+  </v-card>
+  <v-btn
+    block
       :disabled="!valid"
       color="success"
       class="mr-4"
       @click="validate"
     >
-      Validate
+      Zatwierdź
     </v-btn>
-
-    <v-btn
-      color="error"
-      class="mr-4"
-      @click="reset"
-    >
-      Reset Form
-    </v-btn>
-
-    <v-btn
-      color="warning"
-      @click="resetValidation"
-    >
-      Reset Validation
-    </v-btn>
-  </v-form>
-  </v-card>
     </div>
 </div>
     
