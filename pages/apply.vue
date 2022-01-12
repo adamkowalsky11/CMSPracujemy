@@ -14,8 +14,7 @@ import jobForm from '~/components/jobComponents/jobForm.vue'
 
 
 export default defineComponent({
-  components: { card },
-    comments: {jobForm},
+  components: { card, jobForm },
     setup() {
         
     },
