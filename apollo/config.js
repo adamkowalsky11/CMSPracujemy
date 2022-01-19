@@ -1,6 +1,6 @@
 export default function(context){
     return{
         httpEndpoint: 'https://graphql.datocms.com',
-        getAuth:() => '02e48c46ec8f43f92bc60194d274c1'
+        getAuth:() => '1ed6b54a073b38829b11dd59b60a97'
     }
 }

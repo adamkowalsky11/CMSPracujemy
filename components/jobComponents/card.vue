@@ -1,7 +1,9 @@
 <template>
+<div>
   <v-card
     :loading="loading"
     class="mx-auto my-12"
+    v-for="job in allJobs" :key="job.id"
   >
   <v-row >
     <v-col cols="3">
@@ -16,16 +18,16 @@
     <v-img
       max-height="200"
       max-width="200"
-      src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
+      :src="job.logo.url"
     ></v-img>
     </v-col>
     <v-col>
       <v-row>
         <v-card-title>
-          Nazwa posady
+          {{job.title}}
         </v-card-title>
         <v-card-text>
-          Nazwa firmy
+          {{job.company}}
         </v-card-text>
   <v-divider class="mx-4"></v-divider>
     
@@ -39,24 +41,40 @@
         active-class="deep-purple accent-4 white--text"
         column
       >
-        <v-chip disabled>Stawka</v-chip>
+        <v-chip disabled>{{job.salary}}</v-chip>
 
-        <v-chip disabled>Poziom</v-chip>
+        <v-chip disabled>{{job.level}}</v-chip>
       </v-chip-group>
     </v-card-text>
   </v-row>
     </v-col>
 </v-row>
   </v-card>
+  </div>
 </template>
 
 <script>
-const zmienna = [,]
+  import gql from "graphql-tag"
   export default {
     data: () => ({
       loading: false,
       selection: 1,
+     
     }),
+     apollo: {
+    allJobs: gql`{
+      allJobs {
+    id
+    level
+    salary
+    title
+    company
+    logo {
+      url
+    }
+  }
+    }`,
+  },
 
     methods: {
       reserve () {
