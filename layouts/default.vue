@@ -66,6 +66,18 @@ export default {
           icon: 'mdi-offer',
           title: 'Oferty pracy',
           to: '/jobs'
+        },
+        {
+          title: 'Edytuj profil',
+          to: '/addProfile'
+        },
+        {
+          title: 'Lista pracodawców',
+          to: 'profileList'
+        },
+        {
+          title: 'Dodaj ofertę',
+          to: 'addJob'
         }
       ],
       miniVariant: false,

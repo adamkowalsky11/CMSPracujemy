@@ -5,6 +5,11 @@
     Oferty pracy
   </header>
   <v-row>
+    <v-col>
+      <jobsSearch/>
+    </v-col>
+  </v-row>
+  <v-row>
     <v-col cols="4">
   <search-parameter/>
   </v-col>
@@ -14,7 +19,10 @@
   
   </v-row>
     <location/>
-
+    <v-btn 
+    block>
+      Szukaj
+    </v-btn>
   <card/>
 </div>
 </template>
@@ -26,10 +34,11 @@ import priceRange from '~/components/jobComponents/priceRange.vue'
 import SearchParameter from '~/components/jobComponents/searchParameter.vue'
 import Card from '~/components/jobComponents/card.vue'
 import location from '~/components/jobComponents/location.vue'
+import jobsSearch from '~/components/jobComponents/jobsSearch.vue'
 
 
 export default defineComponent({
-  components: { priceRange, SearchParameter, Card, location },
+  components: { priceRange, SearchParameter, Card, location, jobsSearch },
   
     Cardapollo:{
     allJobs: gql`{

@@ -62,6 +62,7 @@
       </template>
     </v-select>
   </v-container>
+  <v-text-field label="Opis"></v-text-field>
   </v-col>
   </v-row>
             </v-form>
